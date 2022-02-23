@@ -9,3 +9,21 @@
   --black: black;
 }
 
+/* Navbar */
+
+.navbar_after{
+  display: flex;
+  justify-content: space-between;
+
+  height: 3vh;
+
+  padding: 1em 2em;
+}
+
+.nav_list ul{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  list-style: none;
+}
