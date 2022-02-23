@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -7,5 +9,20 @@
   --darkRed: #E63020;
   --white: white;
   --black: black;
+}
+
+/* Cart */
+.dividerLine{
+  margin-top: 2%;
+  height : 8px;
+  background-color: var(--darkRed);
+}
+
+.cartHeading{
+  text-align: center;
+  margin: 1.01em 0;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Lora', serif;
 }
 
