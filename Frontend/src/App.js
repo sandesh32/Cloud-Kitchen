@@ -1,4 +1,4 @@
-import Footer from "./pages/Components/Footer";
+import Footer from "./Pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
