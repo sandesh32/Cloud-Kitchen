@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
   --darkRed: #E63020;
   --white: white;
   --black: black;
+  --lora: 'Lora', serif;
 }
 
 /* Navbar */
@@ -29,3 +32,76 @@
 
   list-style: none;
 }
+
+/* Footer */
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: var(--darkRed);
+
+  height: 35vh;
+}
+
+.footer_content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 180px;
+}
+
+.social_media_links{
+  width: 100%;
+}
+
+.social_media_links ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.social_media_links ul li:hover{
+  cursor: pointer;
+}
+
+.footer_links{
+  width: 180px;
+}
+
+.footer_links ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.copyright,
+.footer_links ul li{
+  color: var(--white);
+  font-family: var(--lora);
+  font-size: 18px;
+}
+
+.footer_links ul li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+

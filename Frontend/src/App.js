@@ -1,3 +1,4 @@
+import Footer from "./Pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -36,6 +37,7 @@ function App() {
         ></Route>
         <Route path="/" element={<LandingPage/>}/>      
       </Routes>
+      <Footer/>
     </Router>
   );
 }
