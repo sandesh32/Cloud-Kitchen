@@ -1,9 +1,9 @@
-import NavbarAfter from "./Components/NavbarAfter";
+import Navbar from "./Components/Navbar";
 
 const LandingPage = () => {
     return ( 
         <div>
-            <NavbarAfter/>
+            <Navbar/>
         </div>
      );
 }
