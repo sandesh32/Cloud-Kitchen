@@ -1,9 +1,15 @@
-import Navbar from "./Components/Navbar";
+import LPBanner from "./Components/LPBanner";
+import LPOurServices from "./Components/LPOurServices";
+import LPStatistics from "./Components/LPStatistics";
+import LPSubscribe from "./Components/LPSubscribe";
 
 const LandingPage = () => {
     return ( 
         <div>
-            <Navbar/>
+            <LPBanner/>
+            <LPOurServices/>
+            <LPStatistics/>
+            <LPSubscribe/>
         </div>
      );
 }
