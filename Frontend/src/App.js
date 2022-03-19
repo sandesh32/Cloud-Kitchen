@@ -1,4 +1,9 @@
 import Footer from "./Pages/Components/Footer";
+import Cart from './pages/Cart';
+import LandingPage from "./pages/LandingPage";
+import axios from "axios";
+import React, {useState} from 'react';
+import Footer from "./pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,6 +23,7 @@ function App() {
     setDetails(message.data);
   };
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/check" element={
@@ -32,11 +38,55 @@ function App() {
               <br />
               {details}
             </div>
-        }
-        ></Route>
+        }></Route>
         <Route path="/" element={<LandingPage/>}/>      
       </Routes>
     </Router>
+    <div>
+      <Cart/>
+    </div>
+    </>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/check" element={
+    //         <div>
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <button onClick={getData}>Get Data</button>
+    //           <br />
+    //           <br />
+    //           {details}
+    //         </div>
+
+    //     }
+    //     ></Route>
+    //     <Route path="/" element={<LandingPage/>}/>      
+    //   </Routes>
+    //   <Footer/>
+    // </Router>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/check" element={
+    //         <div>
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <button onClick={getData}>Get Data</button>
+    //           <br />
+    //           <br />
+    //           {details}
+    //         </div>
+    //     }
+    //     ></Route>
+    //     <Route path="/" element={<LandingPage/>}/>      
+    //   </Routes>
+    //   <Footer/>
+    // </Router>
   );
 }
 
