@@ -14,7 +14,7 @@ const CartComponent = () => {
                             <div className="itemNumbers">
                                 <div className="itemQuantity">
                                     <div className="quantityButton"><button><p>-</p></button></div>
-                                    <div className="quantity"><p>2</p></div>
+                                    <div className="quantity"><p>8</p></div>
                                     <div className="quantityButton"><button><p>+</p></button></div>
                                 </div>
                                 <div className="itemPrice">
