@@ -1,4 +1,4 @@
-import Footer from "./Pages/Components/Footer";
+import Footer from "./pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,7 +7,7 @@ import {
 
 import React, {useState} from 'react';
 
-import LandingPage from "./Pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import axios from "axios";
 
 function App() {
@@ -32,7 +32,6 @@ function App() {
               <br />
               {details}
             </div>
-
         }
         ></Route>
         <Route path="/" element={<LandingPage/>}/>      
