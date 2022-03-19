@@ -28,5 +28,5 @@ app.use("/users", userRouter);
 app.use("/products", productRouter);
 
 app.get("/", (req, res) => {
-    res.send("HELLO Kapil");
+    res.send("HELLO Sandesh");
 });

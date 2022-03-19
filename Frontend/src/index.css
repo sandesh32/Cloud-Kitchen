@@ -6,6 +6,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+
 :root{
   --darkRed: #E63020;
   --lightRed: #DD3A2B;
@@ -49,14 +50,16 @@ input:focus{
 /* Navbar */
 
 .navbar{
-  position: fixed;
+  position: sticky;
+  top:0px;
   display: flex;
   justify-content: space-between;
-
+  background-color: white;
   height: 3vh;
   width: calc(100vw - 4em);
 
   padding: 1em 2em;
+  z-index: 1;
 }
 
 .nav_list ul{
@@ -180,6 +183,9 @@ input:focus{
 /* Footer */
 
 .footer{
+  /* position: absolute; */
+  bottom: 0;
+  width: 100vw;
   width: 100%;
   display: flex;
   flex-direction: column;

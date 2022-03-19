@@ -1,8 +1,8 @@
 import Cart from './pages/Cart';
 import LandingPage from "./pages/LandingPage";
-import Footer from "./pages/Components/Footer";
 import axios from "axios";
 import React, {useState} from 'react';
+import Footer from "./pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -36,6 +36,26 @@ function App() {
     //           {details}
     //         </div>
 
+    //     }
+    //     ></Route>
+    //     <Route path="/" element={<LandingPage/>}/>      
+    //   </Routes>
+    //   <Footer/>
+    // </Router>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/check" element={
+    //         <div>
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <button onClick={getData}>Get Data</button>
+    //           <br />
+    //           <br />
+    //           {details}
+    //         </div>
     //     }
     //     ></Route>
     //     <Route path="/" element={<LandingPage/>}/>      
