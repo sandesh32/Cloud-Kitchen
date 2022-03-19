@@ -5,6 +5,7 @@
   padding: 0;
 }
 
+
 :root{
   --darkRed: #E63020;
   --white: white;
@@ -15,14 +16,16 @@
 /* Navbar */
 
 .navbar{
-  position: fixed;
+  position: sticky;
+  top:0px;
   display: flex;
   justify-content: space-between;
-
+  background-color: white;
   height: 3vh;
   width: calc(100vw - 4em);
 
   padding: 1em 2em;
+  z-index: 1;
 }
 
 .nav_list ul{
@@ -36,7 +39,7 @@
 /* Footer */
 
 .footer{
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100vw;
   display: flex;
