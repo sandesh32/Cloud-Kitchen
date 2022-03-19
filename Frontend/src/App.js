@@ -1,3 +1,7 @@
+import Cart from './pages/Cart';
+import LandingPage from "./pages/LandingPage";
+import axios from "axios";
+import React, {useState} from 'react';
 import Footer from "./pages/Components/Footer";
 import {
   BrowserRouter as Router,
@@ -5,10 +9,6 @@ import {
   Route,
 } from "react-router-dom";
 
-import React, {useState} from 'react';
-
-import LandingPage from "./pages/LandingPage";
-import axios from "axios";
 
 function App() {
   var url = "http://localhost:5000/";
@@ -18,26 +18,50 @@ function App() {
     setDetails(message.data);
   };
   return (
-    <Router>
-      <Routes>
-        <Route path="/check" element={
-            <div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <button onClick={getData}>Get Data</button>
-              <br />
-              <br />
-              {details}
-            </div>
-        }
-        ></Route>
-        <Route path="/" element={<LandingPage/>}/>      
-      </Routes>
-      <Footer/>
-    </Router>
+    <div>
+      <Cart/>
+    </div>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/check" element={
+    //         <div>
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <button onClick={getData}>Get Data</button>
+    //           <br />
+    //           <br />
+    //           {details}
+    //         </div>
+
+    //     }
+    //     ></Route>
+    //     <Route path="/" element={<LandingPage/>}/>      
+    //   </Routes>
+    //   <Footer/>
+    // </Router>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/check" element={
+    //         <div>
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <br />
+    //           <button onClick={getData}>Get Data</button>
+    //           <br />
+    //           <br />
+    //           {details}
+    //         </div>
+    //     }
+    //     ></Route>
+    //     <Route path="/" element={<LandingPage/>}/>      
+    //   </Routes>
+    //   <Footer/>
+    // </Router>
   );
 }
 
