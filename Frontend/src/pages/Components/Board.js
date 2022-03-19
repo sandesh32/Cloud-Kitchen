@@ -9,6 +9,7 @@ const Board = () => {
             <Tile/>
             <Tile/>
             <Tile/>
+            
         </div>
         </div>
         

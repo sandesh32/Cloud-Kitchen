@@ -13,16 +13,16 @@
 .out{
     display: flex;
     width:100vw;
-    height: 25vh;
+    height: 40vh;
     justify-content: center;
     align-items: center;
     background-color: black;
 } 
 
 .offer-outer{
-    width: 600px;
+    width: 650px;
     display: inline-flex;
-    height:25vh;
+    height:40vh;
     overflow: hidden;
 }
 

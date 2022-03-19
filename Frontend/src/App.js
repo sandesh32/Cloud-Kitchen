@@ -14,8 +14,8 @@ function App() {
   var url = "http://localhost:5000/";
   const [details, setDetails] = useState('');
   const getData = async()=>{
-    const message = await axios.get(url);
-    setDetails(message.data);
+  const message = await axios.get(url);
+  setDetails(message.data);
   };
   return (
     <Router>
