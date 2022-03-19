@@ -12,6 +12,8 @@ const LandingPage = () => {
             <Board/>
             <Board/>
             <Board/>
+        </div>
+    )
             
 import LPBanner from "./Components/LPBanner";
 import LPOurServices from "./Components/LPOurServices";
@@ -29,4 +31,4 @@ const LandingPage = () => {
      );
 }
  
-export default LandingPage;
+// export default LandingPage;
