@@ -31,3 +31,14 @@ app.use("/products", productRouter);
 app.get("/", (req, res) => {
     res.send("HELLO Sandesh");
 });
+
+app.get("/products",(req,res) => {
+    productModels.find({ })
+    .then((data)=>{
+        console.log('Data: ',data);
+        res.json(data);
+    })
+    .catch((error)=>{
+        console.log('error ');
+    })
+});
