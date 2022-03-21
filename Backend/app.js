@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 5000;
 const cors = require('cors');
+const productModels = require('./models/product');
 
 app.use(express.json());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
