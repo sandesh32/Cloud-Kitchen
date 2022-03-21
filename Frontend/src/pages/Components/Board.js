@@ -1,14 +1,22 @@
 import Tile from "./Tile";
 
-const Board = () => {
+const Board = (props) => {
+    const fooddetail=props.fooddetail;
+    const title=fooddetail.title;
+    const foods=fooddetail.food;
+
     return ( 
         <div className="board">
-        <h1 className="board_title"> This weeks most selling!!</h1>
+        <h1 className="board_title"> {title}</h1>
         <div class="content">
             {/* <Navbar/> */}
+            {foods.map((food)=> (
+                <Tile food={food} key={food.id}/>
+            )
+        )};
+            {/* <Tile />
             <Tile/>
-            <Tile/>
-            <Tile/>
+            <Tile/> */}
         </div>
         </div>
         
