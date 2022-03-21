@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+}
 
 :root{
   --darkRed: #E63020;
   --lightRed: #DD3A2B;
   --white: white;
   --black: black;
+  --lora: 'Lora', serif;
+  --lobster: 'Lobster', cursive;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
   --fadedBlack: rgba(0, 0, 0, 0.94);
   --lora: 'Lora', serif;
   --lobster: 'Lobster', cursive;
@@ -43,6 +68,167 @@ input:focus{
   gap: 2em;
 
   list-style: none;
+}
+
+/* Cart */
+.dividerLine{
+  margin-top: 2%;
+  height : 8px;
+  background-color: var(--darkRed);
+}
+
+.cartContainer{
+  font-family: var(--lora);
+  
+}
+
+.cartHeading{
+  text-align: center;
+  margin: 1.01em 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.cartBody{
+  /* width: 500px; */
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cartItems{
+  width: 45%;
+  min-width: 400px;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.cartBill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: var(--darkRed);
+}
+.Billinner{
+  /* width: 75%;
+  border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  width: 75%;
+  gap: 20px;
+  /* min-width: 400px; */
+  /* height: 500px; */
+  /* min-height: 300px; */
+  
+}
+
+.row{
+   display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold ;
+  /* border: 2px solid black;  */
+}
+.total{
+  font-size: 2em;
+  font-weight: bold ;
+}
+.data{
+  width: 36%; 
+  color: white;
+  font-size: 1.5em;
+  /* border: 2px solid black; */
+}
+
+.Button{
+  width: 75%;
+   display: flex;
+  width: 75%;
+  flex-direction: row;
+  justify-content: space-around; 
+  box-sizing: border-box;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: white;
+  /* align-items: center; */
+  padding: 10px;
+
+}
+.cartItem{
+  width: 95%;
+  height: 160px;
+
+  margin: 36px 10px;
+
+  background: #FFFFFF;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.itemImage{
+  width: 30%;
+}
+
+.itemImage img{
+  width: 100%;
+  height: 100%; 
+
+}
+
+.itemInfo{
+  width: 70%;
+  min-width: 250px;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.itemName{
+  width: 100%;
+  margin-left: 5%;
+}
+
+.itemNumbers{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.itemQuantity{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.quantityButton button{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  background: #FFFFFF;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.quantityButton button p{
+  font-size: 24px;
 }
 
 /* Footer */
@@ -349,4 +535,116 @@ input:focus{
   border-radius: 0 2px 2px 0;
   cursor: pointer;
 
+}
+
+
+/* Login Page */
+
+.loginbody {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.loginpage{
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.loginsec{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.loginsec>p{
+  font-family: var(--lobster);
+}
+
+.loginform{
+  height: 100%;
+  padding: 4em;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.loginform form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.loginform form input[type="submit"]{
+  width: 30%;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--darkRed);
+  font-weight: 600px;
+  cursor: pointer;
+  margin-top: 0.5em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.loginform form input[type="submit"]:hover{
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.loginform form input[type="email"],
+.loginform form input[type="password"]{
+  font-size: 16px;
+  border: none;
+  /* padding: 0.1em 0.2em;
+  border-bottom: 1px solid var(--darkRed); */
+  padding: 0.1em 1em;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.loginform form input{
+  height: 40px;
+}
+
+.loginform > h1 {
+  text-align: center;
+  font-family: var(--lora);
+  font-size: 32px;
+  line-height: 46.08px;
+  font-weight: 700;
+}
+
+.loginform form{
+  display: flex;
+  flex-direction: column;
+}
+
+.loginphoto > img {
+  width: 100%;
+}
+
+.horizontalline{
+  height: 1px;
+  background-color: var(--darkRed);
+  margin: 1em 0;
+}
+
+.loginlinks p{
+  font-size: 14px;
+}
+
+.loginlinks a{
+  text-decoration: none;
+  color: var(--darkRed);
+}
+
+.loginlinks a:hover{
+  text-decoration: underline;
 }
