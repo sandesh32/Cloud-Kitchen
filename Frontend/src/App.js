@@ -1,26 +1,26 @@
-import Footer from "./Pages/Components/Footer";
+import Footer from "./pages/Components/Footer";
 import Cart from './pages/Cart';
 import LandingPage from "./pages/LandingPage";
 import axios from "axios";
 import React, {useState} from 'react';
-import Footer from "./pages/Components/Footer";
+// import Footer from "./pages/Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
 
-import LandingPage from "./Pages/LandingPage";
-import axios from "axios";
+// import LandingPage from "./Pages/LandingPage";
+// import axios from "axios";
 
 function App() {
   var url = "http://localhost:5000/";
   const [details, setDetails] = useState('');
   const getData = async()=>{
-    const message = await axios.get(url);
-    setDetails(message.data);
+  const message = await axios.get(url);
+  setDetails(message.data);
   };
   return (
     <>

@@ -91,18 +91,12 @@ input:focus{
 
 .cartBody{
   /* width: 500px; */
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
-.cartBill{
-  width: 500px;
-  height: 500px;
-  background-color: var(--darkRed);
-}
-
 .cartItems{
   width: 45%;
   min-width: 400px;
@@ -111,6 +105,63 @@ input:focus{
   overflow-y: auto;
 }
 
+.cartBill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: var(--darkRed);
+}
+.Billinner{
+  /* width: 75%;
+  border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  width: 75%;
+  gap: 20px;
+  /* min-width: 400px; */
+  /* height: 500px; */
+  /* min-height: 300px; */
+  
+}
+
+.row{
+   display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold ;
+  /* border: 2px solid black;  */
+}
+.total{
+  font-size: 2em;
+  font-weight: bold ;
+}
+.data{
+  width: 36%; 
+  color: white;
+  font-size: 1.5em;
+  /* border: 2px solid black; */
+}
+
+.Button{
+  width: 75%;
+   display: flex;
+  width: 75%;
+  flex-direction: row;
+  justify-content: space-around; 
+  box-sizing: border-box;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: white;
+  /* align-items: center; */
+  padding: 10px;
+
+}
 .cartItem{
   width: 95%;
   height: 160px;
