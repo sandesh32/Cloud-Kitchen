@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPageComponent = () => {
   return (
     <div className="loginpage">
       <div className="loginsec">
@@ -27,4 +27,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default LoginPageComponent;

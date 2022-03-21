@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const product = require('./models/product');
 const app = express();
 const port = 5000;
 const cors = require('cors');
@@ -28,10 +29,6 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use("/users", userRouter);
 app.use("/products", productRouter);
 
-app.get("/", (req, res) => {
-    res.send("HELLO Sandesh");
-});
-
 app.get("/products",(req,res) => {
     productModels.find({ })
     .then((data)=>{
@@ -41,4 +38,18 @@ app.get("/products",(req,res) => {
     .catch((error)=>{
         console.log('error ');
     })
+});
+
+app.get('/', function(req, res) {
+    res.send("WELCOME TO BACKEND");
+    // product.find((err, docs) => {
+    //     if (!err) {
+    //         res.render("list", {
+    //             data: docs
+    //         });
+    //     } else {
+    //         console.log('Failed to retrieve the product List: ' + err);
+    //     }
+    // });
+ 
 });
