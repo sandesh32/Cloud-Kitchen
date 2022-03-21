@@ -79,16 +79,40 @@ const CartComponent = () => {
                     </div>
                 </div>
                 <div className="cartBill">
-                    <p id="domain">Food</p>
-                    <p id="price">$ 6.00</p>
-                    <p id="domain">Delivery</p>
-                    <p id="price">$ 1.00</p>
-                    <p id="domain">Taxes</p>
-                    <p id="price">$ 0.50</p>
-                    <p id="domain">Discount</p>
-                    <p id="price">$ 0.50</p>
-                    <p id="total">Total</p>
-                    <p id="price">$ 7.00</p>
+                    <div className="Billinner">
+                    <div className="row">
+                        <div id="data">Food</div>
+                        <div id="data">$ 6.00</div>
+                    </div>
+                    <div className="row">
+                        <div id="data">Delivery</div>
+                        <div id="data">$ 1.00</div>
+                    </div>
+                    <div className="row">
+                    <div id="data">Taxes</div>
+                    <div id="data">$ 0.50</div>
+                    </div>
+                    <div className="row">
+                        <div id="data">Delivery</div>
+                        <div id="data">$ 1.00</div>
+                    </div>
+                    
+                    <div className="total row">
+                        <div id="data">Total</div>
+                        <div id="data">$ 7.00</div>
+                    </div>
+                
+                    <div className=" row">
+                    <div className="Button">
+                    Checkout
+                    </div>
+                       
+                    </div>
+                    </div>
+                    
+
+                    
+                
                 </div>
             </div>
 
