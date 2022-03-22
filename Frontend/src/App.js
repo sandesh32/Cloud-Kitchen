@@ -1,7 +1,7 @@
 import Cart from "./pages/Cart";
 import LandingPage from "./pages/LandingPage";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./pages/Components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import RegisterPage from "./pages/RegisterPage";
@@ -11,13 +11,25 @@ import HomePage from "./pages/Components/HomePage";
 import RegisterPage from "./pages/Components/RegisterPage";
 
 function App() {
-  var url = "http://localhost:5000/";
+  const url = "http://localhost:5000/";
+  const get_food3_url = "http://localhost:5000/products3";
+  
   const get_food_url = "http://localhost:5000/products";
-  const [foodDetails, setFoodDetails] = useState([]);
 
   const [details, setDetails] = useState("");
+
+  const [foodDetails, setFoodDetails] = useState([]);
+
+  const getFoodData = async() => {
+    const products3 = await axios.get(get_food3_url);
+    console.log(products3.data);
+    setFoodDetails(products3.data);
+  }
+
+  useEffect(() => getFoodData());
   const getData = async () => {
     const message = await axios.get(url);
+    console.log(message);
     setDetails(message.data);
   };
 
