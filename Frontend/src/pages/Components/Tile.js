@@ -19,7 +19,7 @@ const Tile= (props) => {
             </div>
             <div className="price"> 
                 <span>
-                    {food.price}
+                    ${food.price}
                     {/* 5$ */}
                 </span>
                 <span>

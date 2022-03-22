@@ -13,7 +13,7 @@ const Board = (props) => {
             {foods.map((food)=> (
                 <Tile food={food} key={food._id}/>
             )
-        )};
+        )}
             {/* <Tile />
             <Tile/>
             <Tile/> */}
