@@ -12,7 +12,7 @@ const HomePage =(props)=>{
             <Navbar/>
             <Offer/>
             {fooddetails.map((fooddetail)=> (
-                <Board fooddetail={fooddetail} key={fooddetail.id}/>
+                <Board fooddetail={fooddetail} key={fooddetail._id}/>
             )
         )};
            

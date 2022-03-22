@@ -11,7 +11,7 @@ const Board = (props) => {
         <div class="content">
             {/* <Navbar/> */}
             {foods.map((food)=> (
-                <Tile food={food} key={food.id}/>
+                <Tile food={food} key={food._id}/>
             )
         )};
             {/* <Tile />

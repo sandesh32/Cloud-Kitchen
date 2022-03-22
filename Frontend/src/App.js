@@ -11,16 +11,16 @@ import HomePage from "./pages/Components/HomePage";
 
 function App() {
   const url = "http://localhost:5000/";
-  const get_food_url = "http://localhost:5000/products";
-  const foodTypes = ["Snacks"];
+  const get_food_url = "http://localhost:5000/products3";
+  
   const [details, setDetails] = useState("");
 
   const [foodDetails, setFoodDetails] = useState([]);
 
   const getFoodData = async() => {
-    const products = await axios.get(get_food_url);
-    console.log(products.data);
-    setFoodDetails(products.data);
+    const products3 = await axios.get(get_food_url);
+    console.log(products3.data);
+    setFoodDetails(products3.data);
   }
 
   useEffect(() => getFoodData());
