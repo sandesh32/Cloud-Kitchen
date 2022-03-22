@@ -8,17 +8,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/Components/LoginPage";
 import HomePage from "./pages/Components/HomePage";
+import RegisterPage from "./pages/Components/RegisterPage";
 
 function App() {
   const url = "http://localhost:5000/";
-  const get_food_url = "http://localhost:5000/products3";
+  const get_food3_url = "http://localhost:5000/products3";
   
+  const get_food_url = "http://localhost:5000/products";
+
   const [details, setDetails] = useState("");
 
   const [foodDetails, setFoodDetails] = useState([]);
 
   const getFoodData = async() => {
-    const products3 = await axios.get(get_food_url);
+    const products3 = await axios.get(get_food3_url);
     console.log(products3.data);
     setFoodDetails(products3.data);
   }
@@ -48,7 +51,10 @@ function App() {
             </div>
         }></Route>
         <Route path="/" element={<LandingPage/>}/> 
-        <Route path="/login" element={<LoginPage/>}/> 
+        <Route path="/register" element={<RegisterPage/>}/> 
+        <Route path="/logincustomer" element={<LoginPage user={"customer"}/>}/> 
+        <Route path="/loginkitchenemployee" element={<LoginPage user={"kitchenemployee"}/>}/> 
+        <Route path="/logindeliverypersonnel" element={<LoginPage user={"deliverypersonnel"}/>}/> 
         <Route path="/home" element={<HomePage fooddetails={foodDetails}/>}/> 
         <Route path="/cart" element={<Cart/>}/> 
         {/* <Route path="/registerpage" element={<RegisterPage/>}/>

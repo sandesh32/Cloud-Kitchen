@@ -8,7 +8,7 @@ const LPBanner = () => {
                 <div className="banner_para"><p>We have some amazing food waiting for you.</p>
                 <p>Order now.</p></div>
                 <div className="find_food_button">
-                    <Link to={"/login"}><button>Find Food</button></Link>   
+                    <Link to={"/logincustomer"}><button>Find Food</button></Link>   
                 </div>
             </div>
         </div>
