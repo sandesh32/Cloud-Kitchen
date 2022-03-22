@@ -8,22 +8,25 @@ router.get('/name', (req, res) => {
 
 router.get('/save', (req, res) => {
     const product31 = new product3({
-        title : "Snacks",
+        title : "Dinner",
         food : [
             {
-                tag : ["Light","Cheap"],
-                name : "Paneer Pakoda",
-                price : 5,            
+                tag : ["Heavy","Awesome"],
+                name : "Paneer",
+                price : 25, 
+                imageurl : "random1",           
             },
             {
-                tag : ["Light","Cheap"],
-                name : "Paneer Pakoda",
-                price : 5, 
+                tag : ["Heavy","Awesome"],
+                name : "Paneer",
+                price : 25, 
+                imageurl : "random2",
             },
             {
-                tag : ["Light","Cheap"],
-                name : "Paneer Pakoda",
-                price : 5, 
+                tag : ["Heavy","Awesome"],
+                name : "Paneer",
+                price : 25, 
+                imageurl : "random3",
             },
             
         ],
