@@ -8,44 +8,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/Components/LoginPage";
 import HomePage from "./pages/Components/HomePage";
+import RegisterPage from "./pages/Components/RegisterPage";
 
 function App() {
   var url = "http://localhost:5000/";
+  const get_food_url = "http://localhost:5000/products";
+  const [foodDetails, setFoodDetails] = useState([]);
+
   const [details, setDetails] = useState("");
   const getData = async () => {
     const message = await axios.get(url);
     setDetails(message.data);
   };
-  const [fooddetails, setFooddetails] = useState([
-    {
-      title: "Todays Special",
-      food: [{tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-            ],
-    },
-    {
-      title: "Special Nonveg",
-      food: [{tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-            ],
-    },
-    {
-      title: "Veg Special",
-      food: [{tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-            ],
-  },
-    {
-      title: "Most Selling",
-      food: [{tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-              {tag: ["tag1", "tag2"],name: "Golden Pizza",price: "5$"},
-            ],
-  },
-  ]);
+
   return (
     <>
     <Router>
@@ -64,8 +39,11 @@ function App() {
             </div>
         }></Route>
         <Route path="/" element={<LandingPage/>}/> 
-        <Route path="/login" element={<LoginPage/>}/> 
-        <Route path="/home" element={<HomePage fooddetails={fooddetails}/>}/> 
+        <Route path="/register" element={<RegisterPage/>}/> 
+        <Route path="/logincustomer" element={<LoginPage user={"customer"}/>}/> 
+        <Route path="/loginkitchenemployee" element={<LoginPage user={"kitchenemployee"}/>}/> 
+        <Route path="/logindeliverypersonnel" element={<LoginPage user={"deliverypersonnel"}/>}/> 
+        <Route path="/home" element={<HomePage fooddetails={foodDetails}/>}/> 
         <Route path="/cart" element={<Cart/>}/> 
         {/* <Route path="/registerpage" element={<RegisterPage/>}/>
           <Route path="/mainpage" element={<MainPage/>}/> */}
