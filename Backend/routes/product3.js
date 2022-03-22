@@ -8,23 +8,23 @@ router.get('/name', (req, res) => {
 
 router.get('/save', (req, res) => {
     const product31 = new product3({
-        title : "Dinner",
+        title : "Italian",
         food : [
             {
-                tag : ["Heavy","Awesome"],
-                name : "Paneer",
+                tag : ["veg","all time snack"],
+                name : "Pasta Carbonara",
                 price : 25, 
                 imageurl : "random1",           
             },
             {
-                tag : ["Heavy","Awesome"],
-                name : "Paneer",
+                tag : ["veg","kids special"],
+                name : "Mushroom Risotto",
                 price : 25, 
                 imageurl : "random2",
             },
             {
-                tag : ["Heavy","Awesome"],
-                name : "Paneer",
+                tag : ["veg","most loved"],
+                name : "Margherita Pizza",
                 price : 25, 
                 imageurl : "random3",
             },
