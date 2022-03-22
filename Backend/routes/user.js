@@ -62,7 +62,6 @@ router.post('/login', async(req, res) => {
                     },
                     process.env.SECRET);
                 res.send(token);
-
             } else {
                 res.send("Invalid Credentials");
             }
