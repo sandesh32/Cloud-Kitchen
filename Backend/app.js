@@ -46,7 +46,6 @@ app.get("/products",(req,res) => {
 app.get("/products3",(req,res) => {
     product3Models.find({ })
     .then((data)=>{
-        console.log('Data: ',data);
         res.json(data);
     })
     .catch((error)=>{

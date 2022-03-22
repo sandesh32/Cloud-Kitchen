@@ -22,7 +22,6 @@ function App() {
 
   const getFoodData = async() => {
     const products3 = await axios.get(get_food3_url);
-    console.log(products3.data);
     setFoodDetails(products3.data);
   }
 
