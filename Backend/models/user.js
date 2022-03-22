@@ -14,6 +14,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
 
+    type: {
+        type: String,
+        enum: ['customer', "delivery_person", "kitchen_employee"],
+        required: true
+    },
+
     email: {
         type: String,
         minlength: 6,

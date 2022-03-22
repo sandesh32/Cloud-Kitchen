@@ -1,27 +1,30 @@
 const Tile= (props) => {
-    const index = props.index;
-    const product = props.product;
+    const food=props.food;
+
     return(
-        <div key={index}>
-            <div className="product">
-                <div className="product_image">
-                    <img src="images/food.jpg" alt=""></img>
-                </div>
-                <div className="title">
-                    {product.name}
-                </div>
-                <div className="tags">
-                    <span>{product.type}</span>
-                    <span>Tag2</span>
-                </div>
-                <div className="price">
-                    <span>
-                        {product.price}
-                    </span>
-                    <span>
-                        <img src="images/buy.png"></img>
-                    </span>
-                </div>
+        <div className="product">
+            <div className="product_image"> 
+                <img src="images/food.jpg" alt="food"></img>
+            </div>
+            <div className="title"> 
+            {/* Golden Pizza!! */}
+                {food.name}
+            </div>
+            <div className="tags"> 
+                 {food.tag.map((ta)=>
+                    <span>{ta}</span>
+                )}
+                {/* <span>tag1</span>
+                <span>tag1</span> */}
+            </div>
+            <div className="price"> 
+                <span>
+                    {food.price}
+                    {/* 5$ */}
+                </span>
+                <span>
+                    <img src="images/buy.png" alt="buy"></img>
+                </span>
             </div>
         </div>
     );
