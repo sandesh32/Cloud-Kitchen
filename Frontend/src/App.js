@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/Components/LoginPage";
 import HomePage from "./pages/Components/HomePage";
+import Delivery from "./pages/Delivery"
+import Orders from "./pages/Orders"
+
 import RegisterPage from "./pages/Components/RegisterPage";
 
 function App() {
