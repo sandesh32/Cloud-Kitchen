@@ -7,13 +7,13 @@ const Board = (props) => {
 
     return ( 
         <div className="board">
-        <h1 className="board_title"> {title}</h1>
+        <h1 className="board_title"> {title} </h1>
         <div class="content">
             {/* <Navbar/> */}
             {foods.map((food)=> (
-                <Tile food={food} key={food.id}/>
+                <Tile food={food} key={food._id}/>
             )
-        )};
+        )}
             {/* <Tile />
             <Tile/>
             <Tile/> */}
@@ -22,5 +22,5 @@ const Board = (props) => {
         
      );
 }
- 
+
 export default Board;

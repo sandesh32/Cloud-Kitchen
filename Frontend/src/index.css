@@ -540,6 +540,8 @@ input:focus{
 
 /* Login Page */
 
+
+.registerpage,
 .loginbody {
   min-height: 100vh;
   display: grid;
@@ -599,6 +601,8 @@ input:focus{
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
 }
 
+.loginform form input[type="text"],
+.loginform form input[type="tel"],
 .loginform form input[type="email"],
 .loginform form input[type="password"]{
   font-size: 16px;
