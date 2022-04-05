@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/Components/LoginPage";
 import HomePage from "./pages/Components/HomePage";
+import Orders from "./pages/Orders";
+import Delivery from "./pages/Delivery";
 
 function App() {
   var url = "http://localhost:5000/";
@@ -67,6 +69,12 @@ function App() {
         <Route path="/login" element={<LoginPage/>}/> 
         <Route path="/home" element={<HomePage fooddetails={fooddetails}/>}/> 
         <Route path="/cart" element={<Cart/>}/> 
+        <Route path="/orders" element={<Orders/>}/> 
+        <Route path="/delivery" element={<Delivery/>}/> 
+
+
+
+        
         {/* <Route path="/registerpage" element={<RegisterPage/>}/>
           <Route path="/mainpage" element={<MainPage/>}/> */}
         
