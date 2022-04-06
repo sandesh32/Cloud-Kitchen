@@ -30,27 +30,27 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use("/users", userRouter);
 app.use("/products", productRouter);
-app.use("/products3",product3Router);
+app.use("/products3", product3Router);
 
-app.get("/products",(req,res) => {
-    productModels.find({ })
-    .then((data)=>{
-        console.log('Data: ',data);
-        res.json(data);
-    })
-    .catch((error)=>{
-        console.log('error ');
-    })
+app.get("/products", (req, res) => {
+    productModels.find({})
+        .then((data) => {
+            console.log('Data: ', data);
+            res.json(data);
+        })
+        .catch((error) => {
+            console.log('error ');
+        })
 });
 
-app.get("/products3",(req,res) => {
-    product3Models.find({ })
-    .then((data)=>{
-        res.json(data);
-    })
-    .catch((error)=>{
-        console.log('error ');
-    })
+app.get("/products3", (req, res) => {
+    product3Models.find({})
+        .then((data) => {
+            res.json(data);
+        })
+        .catch((error) => {
+            console.log('error ');
+        })
 });
 
 app.get('/', function(req, res) {
@@ -64,5 +64,5 @@ app.get('/', function(req, res) {
     //         console.log('Failed to retrieve the product List: ' + err);
     //     }
     // });
- 
+
 });

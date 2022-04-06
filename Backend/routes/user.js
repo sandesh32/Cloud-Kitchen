@@ -33,11 +33,10 @@ router.get('/profile', authenticate, (req, res) => {
 
 router.post('/register', (req, res) => {
     const user1 = new user({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        fullName: req.body.fullname,
         type: "customer",
         email: req.body.email,
-        phone: req.body.phone,
+        phone: req.body.phonenumber,
         password: req.body.password
     });
     user1.save()
@@ -61,8 +60,7 @@ router.post('/login', async(req, res) => {
                         type,
                     },
                     process.env.SECRET);
-                res.send(token);
-
+                res.send({ token });
             } else {
                 res.send("Invalid Credentials");
             }

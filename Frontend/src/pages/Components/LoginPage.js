@@ -1,8 +1,29 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const LoginPage = (props) => {
-  const user = props.user;
-
+  const user = "customer";
+  const handleSubmit = (event) => {
+    const url = "http://localhost:5000/users/login";
+    const data = {
+      email: event.target.email.value,
+      password: event.target.password.value,
+      type: user
+    };
+    axios.post(url,data)
+    .then(res=>{
+      res=JSON.parse(JSON.stringify(res));
+      if(res.data==="Invalid Credentials"){
+      alert(res.data);
+      }
+      else{
+        alert(res.data.token);
+      }
+    })
+    .catch(err=>{
+      alert(err);
+    })
+  }
   return (
     <div className="loginbody">
       <div className="loginpage">
@@ -10,9 +31,9 @@ const LoginPage = (props) => {
           <p>GhostEats</p>
           <div className="loginform">
             <h1>Login</h1>
-            <form action="#">
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
+            <form action="#" onSubmit={handleSubmit}>
+              <input type="email" placeholder="Email" name="email" />
+              <input type="password" placeholder="Password" name="password" />
               <input type="submit" value="Login" />
             </form>
             {(() => {
