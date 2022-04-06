@@ -16,18 +16,18 @@
 }
 
 /* Scroll Bar */
-::-webkit-scrollbar {
-  width: 5px;
+/* ::-webkit-scrollbar {
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
   background: inherit;
-  border-radius: 10px;
+  border-radius: 1px;
 }
  
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px; 
+  border-radius: 1px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -35,7 +35,7 @@
   --fadedBlack: rgba(0, 0, 0, 0.94);
   --lora: 'Lora', serif;
   --lobster: 'Lobster', cursive;
-}
+} */
 
 *{
   margin: 0;

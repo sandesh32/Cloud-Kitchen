@@ -17,7 +17,7 @@ function App() {
   const url = "http://localhost:5000/";
   const get_food3_url = "http://localhost:5000/products3";
   
-  const get_food_url = "http://localhost:5000/products";
+  // const get_food_url = "http://localhost:5000/products";
 
   const [details, setDetails] = useState("");
 
