@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/Components/LoginPage";
 import HomePage from "./pages/Components/HomePage";
+import Delivery from "./pages/Delivery"
+import Orders from "./pages/Orders"
+
 import RegisterPage from "./pages/Components/RegisterPage";
 
 function App() {
@@ -56,6 +59,12 @@ function App() {
         <Route path="/logindeliverypersonnel" element={<LoginPage user={"deliverypersonnel"}/>}/> 
         <Route path="/home" element={<HomePage fooddetails={foodDetails}/>}/> 
         <Route path="/cart" element={<Cart/>}/> 
+        <Route path="/orders" element={<Orders/>}/> 
+        <Route path="/delivery" element={<Delivery/>}/> 
+
+
+
+        
         {/* <Route path="/registerpage" element={<RegisterPage/>}/>
           <Route path="/mainpage" element={<MainPage/>}/> */}
         
