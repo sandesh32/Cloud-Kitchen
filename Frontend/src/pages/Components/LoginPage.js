@@ -2,6 +2,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const LoginPage = (props) => {
+  if(localStorage.token){
+    window.location.href = "/home";
+  }
+  else{
   const user = "customer";
   const handleSubmit = (event) => {
     const url = "http://localhost:5000/users/login";
@@ -17,7 +21,9 @@ const LoginPage = (props) => {
       alert(res.data);
       }
       else{
-        alert(res.data.token);
+        // alert(res.data.token);
+        localStorage.setItem("token",res.data.token);
+        window.location.href="/home";
       }
     })
     .catch(err=>{
@@ -88,6 +94,7 @@ const LoginPage = (props) => {
       </div>
     </div>
   );
+  }
 };
 
 export default LoginPage;
