@@ -2,11 +2,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const LoginPage = (props) => {
+
   if(localStorage.token){
     window.location.href = "/home";
   }
   else{
-  const user = "customer";
+  const user = props.user;
   const handleSubmit = (event) => {
     const url = "http://localhost:5000/users/login";
     const data = {
