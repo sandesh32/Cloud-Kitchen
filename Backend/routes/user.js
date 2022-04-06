@@ -60,7 +60,7 @@ router.post('/login', async(req, res) => {
                         type,
                     },
                     process.env.SECRET);
-                res.send(token);
+                res.send({ token });
             } else {
                 res.send("Invalid Credentials");
             }
