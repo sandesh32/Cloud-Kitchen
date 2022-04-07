@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 const LoginPage = (props) => {
   const user = props.user;
   if(localStorage.token){
-    if(user==localStorage.usertype){
       window.location.href = `/home/${localStorage.usertype}`;
       return;
-    }
   }
   else{
   

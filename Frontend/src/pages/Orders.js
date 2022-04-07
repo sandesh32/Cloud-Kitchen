@@ -2,7 +2,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 const Orders=()=>{
     if(!localStorage.token || localStorage.usertype!=="kitchenemployee"){
-        window.location.href = `/loginkitchenemployee`;
+        window.location.href = `/register`;
         return;
         }
     
