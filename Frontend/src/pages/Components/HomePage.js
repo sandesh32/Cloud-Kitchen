@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const HomePage =(props)=>{
     if(!localStorage.token || localStorage.usertype!=="customer"){
-    window.location.href = `/logincustomer`;
+    window.location.href = `/register`;
     return;
     }
     const fooddetails=props.fooddetails;
