@@ -16,11 +16,11 @@
 }
 
 /* Scroll Bar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 2px;
-}
+} 
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: inherit;
   border-radius: 1px;
 }
@@ -35,7 +35,7 @@
   --fadedBlack: rgba(0, 0, 0, 0.94);
   --lora: 'Lora', serif;
   --lobster: 'Lobster', cursive;
-} */
+}  */
 
 *{
   margin: 0;

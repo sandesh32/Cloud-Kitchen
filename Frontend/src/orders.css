@@ -31,7 +31,7 @@
   /* border: 2px solid black; */
 }
 
-.cartbox{
+.deliver-cartbox{
   font-family: var(--lora);
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
   height: 100vh;
   align-items: center;
 }
-.cart{
+.deliver-cart{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: relative;
@@ -51,11 +51,11 @@
   flex-direction: row;
   /* border: 2px solid black; */
 }
-.cartImagebox{
+.deliver-cartImagebox{
   width: 30%;
   height: 100%;
 }
-.cartImage{
+.deliver-cartImage{
   width: 100%;
   height: 100%;
 

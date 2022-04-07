@@ -4,7 +4,7 @@ const Tile= (props) => {
     return(
         <div className="product">
             <div className="product_image"> 
-                <img src="images/food.jpg" alt="food"></img>
+                <img src="/images/food.jpg" alt="food"></img>
             </div>
             <div className="title"> 
             {/* Golden Pizza!! */}
@@ -23,7 +23,7 @@ const Tile= (props) => {
                     {/* 5$ */}
                 </span>
                 <span>
-                    <img src="images/buy.png" alt="buy"></img>
+                    <img src="/images/buy.png" alt="buy"></img>
                 </span>
             </div>
         </div>

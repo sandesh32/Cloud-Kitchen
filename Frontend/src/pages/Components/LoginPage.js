@@ -2,20 +2,24 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const LoginPage = (props) => {
-
+  const user = props.user;
   if(localStorage.token){
-    window.location.href = "/home";
+    if(user==localStorage.usertype){
+      window.location.href = `/home/${localStorage.usertype}`;
+      return;
+    }
   }
   else{
-  const user = props.user;
+  
   const handleSubmit = (event) => {
     const url = "http://localhost:5000/users/login";
-    const data = {
+    const udata = {
       email: event.target.email.value,
       password: event.target.password.value,
       type: user
     };
-    axios.post(url,data)
+
+    axios.post(url,udata)
     .then(res=>{
       res=JSON.parse(JSON.stringify(res));
       if(res.data==="Invalid Credentials"){
@@ -23,14 +27,17 @@ const LoginPage = (props) => {
       }
       else{
         // alert(res.data.token);
-        localStorage.setItem("token",res.data.token);
-        window.location.href="/home";
+        localStorage.setItem("token",res.data);
+        localStorage.setItem("usertype",user);
+        window.location.href=`/home/${user}`;
       }
     })
     .catch(err=>{
       alert(err);
     })
   }
+  
+  
   return (
     <div className="loginbody">
       <div className="loginpage">
