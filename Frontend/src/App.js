@@ -58,9 +58,10 @@ function App() {
         <Route path="/loginkitchenemployee" element={<LoginPage user={"kitchenemployee"}/>}/> 
         <Route path="/logindeliverypersonnel" element={<LoginPage user={"deliverypersonnel"}/>}/> 
         <Route path="/home" element={<HomePage fooddetails={foodDetails}/>}/> 
+        <Route path="/home/customer" element={<HomePage fooddetails={foodDetails}/>}/> 
         <Route path="/cart" element={<Cart/>}/> 
-        <Route path="/orders" element={<Orders/>}/> 
-        <Route path="/delivery" element={<Delivery/>}/> 
+        <Route path="/home/kitchenemployee" element={<Orders/>}/> 
+        <Route path="/home/deliverypersonnel" element={<Delivery/>}/> 
 
 
 

@@ -12,7 +12,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div>
@@ -26,7 +26,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div> 
@@ -40,7 +40,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div>
@@ -54,7 +54,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div>
@@ -68,7 +68,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div>
@@ -82,7 +82,7 @@ const Offer=()=>{
                 </div>
             </div>
             <div className="right">
-                <img src="images/food.jpg"></img>
+                <img src="/images/food.jpg" alt="offer"></img>
             </div>
         </div>
          </div> 
